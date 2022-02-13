@@ -1,0 +1,23 @@
+version: "3.1"
+services:
+  db-mysql:
+    image: mysql:5.7
+    container_name: db-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3307:3306"
+    volumes: 
+      - /home/dbsql:/var/lib/mysql
+  db-psql:
+    image: postgres:9
+    container_name: db-postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
+    ports:
+      - "5410:5432"
+    volumes:
+      - /home/dbpostgres:/var/lib/postgresql/data
+
