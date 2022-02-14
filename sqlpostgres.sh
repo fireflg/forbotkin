@@ -16,7 +16,7 @@ CREATE TABLE PRODUCTS(
   FOREIGN KEY (priceid)  REFERENCES COSTS (id));
 exit
 MYSQL_SCRIPT
-sleep 2
+sleep 1
 PGPASSWORD=root psql -h 172.17.0.1 -p 5410 -U root -d root postgres -c 'CREATE DATABASE botkin' 
 PGPASSWORD=root psql -h 172.17.0.1 -p 5410 -U root -d botkin <<MYPOSTGRESSQL_SCRIPT
 CREATE TABLE COSTS(
