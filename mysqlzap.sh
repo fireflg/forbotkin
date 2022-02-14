@@ -9,6 +9,7 @@ docker cp db-postgres:/var/lib/postgresql/costs.csv /home/costs.csv
 docker cp db-postgres:/var/lib/postgresql/products.csv /home/products.csv
 docker cp /home/products.csv db-mysql:/var/lib/mysql-files/products.csv
 docker cp /home/costs.csv db-mysql:/var/lib/mysql-files/costs.csv
+
 mysql -uroot -proot -h 127.0.0.1 -P 3307 --protocol=tcp <<MYSQL2_SCRIPT
 USE botkin
 LOAD DATA INFILE 
